@@ -1,0 +1,37 @@
+DROP DATABASE IF EXISTS PONTO;
+CREATE DATABASE PONTO;
+
+USE PONTO;
+
+CREATE TABLE point(
+     id                             INT       PRIMARY KEY      AUTO_INCREMENT 
+    ,entry_time                     TIME
+    ,departure_time_for_lunch       TIME
+    ,entry_time_lunch               TIME
+    ,exit_time                      TIME
+    ,total_hours_day                TIME
+    ,daley                          TIME
+    ,overtime                       TIME
+);
+
+
+/etc/hosts
+127.0.0.1       point.com.br
+
+
+/etc/apache2/sites-enabled/point.conf
+
+ <VirtualHost *:80>
+     ServerName point.com.br
+     DocumentRoot /var/www/project/studies/PHP/zend/point/public
+     SetEnv APPLICATION_ENV "development"
+     <Directory /var/www/project/studies/PHP/zend/point/public>
+         DirectoryIndex index.php
+         AllowOverride All
+         Order allow,deny
+         Allow from all
+     </Directory>
+ </VirtualHost>
+
+
+

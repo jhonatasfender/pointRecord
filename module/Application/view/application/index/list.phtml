@@ -1,0 +1,47 @@
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">Horario da manha</label>
+                <input class="form-control" placeholder="Digite o horário" type="email">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-default" style="margin-top: 25px">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Entry Time</th>
+                            <th>Departure time for lunch</th>
+                            <th>Entry time lunch</th>
+                            <th>Exit time</th>
+                            <th>Total hours of the day</th>
+                            <th>Daley</th>
+                            <th>Overtime</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($ponto as $p) : ?>
+                            <tr>
+                                <td><?php echo $this->escapeHtml($album->entry_time); ?></td>
+                                <td><?php echo $this->escapeHtml($album->departure_time_for_lunch); ?></td>
+                                <td><?php echo $this->escapeHtml($album->entry_time_lunch); ?></td>
+                                <td><?php echo $this->escapeHtml($album->exit_time); ?></td>
+                                <td><?php echo $this->escapeHtml($album->total_hours_day); ?></td>
+                                <td><?php echo $this->escapeHtml($album->daley); ?></td>
+                                <td><?php echo $this->escapeHtml($album->overtime); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
